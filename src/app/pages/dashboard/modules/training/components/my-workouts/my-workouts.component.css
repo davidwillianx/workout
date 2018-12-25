@@ -1,0 +1,21 @@
+.card-exercise {
+    /* min-width: 400px; */
+  margin-top: 20px;
+  /* width: 23%;
+  margin-bottom: 2%; */
+  position: relative;
+}
+
+.card-exercise .avatar-photo {
+   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+   background-size: cover;
+}
+
+.creator-name {
+  color: black;
+}
+
+/* mat-card {
+  width: calc(100% - 70px);
+  height: calc(100% - 70px);
+} */

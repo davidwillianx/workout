@@ -1,0 +1,13 @@
+.avatar-photo {
+   background-image: url('https://www.freeiconspng.com/uploads/exercise-icon-1.png');
+   background-size: cover;
+}
+
+.card-exercise {
+    margin-top: 10px;
+}
+
+.exercise-reps button,
+.exercise-reps a {
+  margin-right: 8px;
+}

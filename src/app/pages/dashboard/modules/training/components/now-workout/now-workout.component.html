@@ -1,0 +1,24 @@
+<mat-card class="card-exercise" *ngFor="let exercise of workout?.activities">
+  <mat-card-header>
+    <div mat-card-avatar class="avatar-photo"></div>
+
+    <mat-card-title>
+      {{exercise.name}}
+    </mat-card-title>
+
+    <mat-card-subtitle>
+      nivel: Hard
+    </mat-card-subtitle>
+
+  </mat-card-header>
+  <!-- <mat-card-content>
+    {{exercise.description}}
+  </mat-card-content> -->
+
+  <mat-card-actions>
+    <div class="exercise-reps" *ngFor="let set of exercise.reps">
+      <button mat-mini-fab [disabled]="exercise.done" (click)="startSet()">{{exercise.sets}}</button>
+    </div>
+  </mat-card-actions>
+
+</mat-card>

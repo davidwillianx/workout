@@ -1,0 +1,13 @@
+.workout-search-field {
+   width: 100%;
+   margin: 6px !important;
+}
+
+.card-exercise {
+   margin-top:  5px;
+}
+
+.avatar-photo {
+   background-image: url('https://www.freeiconspng.com/uploads/exercise-icon-1.png');
+   background-size: cover;
+}

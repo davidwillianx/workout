@@ -1,0 +1,41 @@
+<mat-form-field class="workout-search-field">
+  <!-- <span matPrefix> workout: &nbsp;</span> -->
+  <input type="text" #searchWorkout matInput placeholder="Search">
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+
+<div *ngIf="hasWorkoutsAvailable" class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center">
+  <!-- <ng-container *ngIf="workouts?.lenght"> -->
+  <mat-card fxFlex="0 0 0 0" class="card-exercise" fxLayoutGap="5" *ngFor="let workout of workouts">
+    <mat-card-header>
+
+      <!-- <div mat-card-avatar [style.background-image]="workout.creator.avatar | safeBackground" class="avatar-photo"></div> -->
+      <div mat-card-avatar class="avatar-photo"></div>
+      <mat-card-title>{{workout.description}}</mat-card-title>
+      <mat-card-subtitle> created by: <span class="creator-name">{{workout.creator.name}}</span></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="workout.imgTrusted" alt="exercise">
+    <!-- <img mat-card-image src="https://images.pexels.com/photos/703012/pexels-photo-703012.jpeg?cs=srgb&dl=active-adult-athlete-703012.jpg" alt="Arms"> -->
+    <mat-card-content>
+      <p>
+        {{workout.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button aria-label="add to my workout list">
+        <mat-icon button>add_circle</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="More about this workout">
+        <mat-icon button [routerLink]="['/dashboard/training/workout/details', workout.id ]">more_horiz</mat-icon>
+      </button>
+
+
+    </mat-card-actions>
+  </mat-card>
+  <!-- </ng-container> -->
+</div>
+
+<div *ngIf="!hasWorkoutsAvailable" class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center">
+  No workouts found, try another search query or maybe later ='(
+</div>
